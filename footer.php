@@ -16,6 +16,7 @@
 	$(document).ready(function(){
 	
 		$("nav").sticky({topSpacing:0});
+		$("nav").css({height: "auto"});
 	   
 	   $('#scrollToTop').hide();
 	   
@@ -23,6 +24,7 @@
 	   $("a.hamburger").click(function(event) {
 			event.preventDefault();
 			$("nav ul").slideToggle(500);
+			$('#undefined-sticky-wrapper').css({height: 'auto !important'});
 		});
 	   
 	   // controls full-screen of home screen banner

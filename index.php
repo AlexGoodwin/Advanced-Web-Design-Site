@@ -17,7 +17,7 @@
 		<? include('nav.php');?>
 	    
 	     <section class="grid-100 grid-parent overview" id="dm1">
-	    	<div class="paraBackground zoom" style="background-image: url('img/blimp.jpg');"></div>
+	    	<div class="paraBackground zoom" style="background-image: url('img/dark_wood.jpg');"></div>
 	    
 	    	<h2>Fall 2014: Digital Media 1</h2>
 	    
@@ -25,7 +25,7 @@
 	    		<img src="img/iPhone.png" class="responsiveLeft">
 	    	</div>
 	    	
-	    	<div class="grid-30 prefix-5 suffix-5 darkTrans">
+	    	<div class="grid-30 prefix-5 suffix-5 darkTrans responsiveBottom">
 	    		<ul>
 					<li><h3><a href="#">Belief Project</a></h3></li>
 					<li><h3><a href="#">Digital Media Portal</a></h3></li>
@@ -47,7 +47,7 @@
 	    		<img src="img/mockup.png" class="responsiveRight">
 	    	</div>
 	    	
-	    	<div class="grid-25 prefix-5 suffix-5 darkTrans">
+	    	<div class="grid-25 prefix-5 suffix-5 darkTrans responsiveTop">
 	    		<ul>
 					<li><h3><a href="html5.php">About Me</a></h3></li>
 					<li><h3><a href="CSS.php">Lorax Project</a></h3></li>
@@ -70,7 +70,7 @@
 	    		<img src="img/cusnowboarding.png" class="responsiveLeft">
 	    	</div>
 	    	
-	    	<div class="grid-25 prefix-5 suffix-5 darkTrans">
+	    	<div class="grid-25 prefix-5 suffix-5 darkTrans responsiveBottom">
 	    		<ul>
 					<li><h3>President - 2013-2015</h3></li>
 					<li><h3>300% Team Growth</h3></li>
@@ -90,7 +90,7 @@
 		    	<h2 style="color: #111;">The Strangely Possibles</h2>
 	    	</div>
 	    	
-	    	<div class="grid-25 prefix-70 suffix-5 darkTrans">
+	    	<div class="grid-25 prefix-70 suffix-5 darkTrans responsiveTop">
 	    		<ul>
 					<li><h3>Web & Graphic Design</h3></li>
 					<li><h3>Online Media Publishing</h3></li>
@@ -110,7 +110,7 @@
 		    	<h2>Bubba's Sulky Lounge</h2>
 	    	</div>
 	    	
-	    	<div class="grid-25 prefix-70 suffix-5 darkTrans">
+	    	<div class="grid-25 prefix-70 suffix-5 darkTrans responsiveBottom">
 	    		<ul>
 					<li><h3>Web & Graphic Design</h3></li>
 					<li><h3>Online Media Publishing</h3></li>
@@ -132,27 +132,31 @@
 		    	// parallax backgrounds
 		    	$('.paraBackground').each(function(){
 		    		var offset = $(this).parent().offset().top - scrollTop;
-			    	$(this).css({backgroundPositionY: -offset/3});
+			    	$(this).css({backgroundPositionY: -offset/4});
 		    	})
 		    	
 		    	// side-scrolling parallax
-		    	$('img.responsiveLeft').each(function(){
+		    	$('*.responsiveLeft').each(function(){
 		    		var parentWidth = $(this).parent().width();
 		    		var fromTop = $(this).offset().top - scrollTop;
 		    		$(this).css({right: (fromTop- $(this).height()/2)/3});
 		    	})
-		    	$('img.responsiveRight').each(function(){
+		    	$('*.responsiveRight').each(function(){
 			    	var parentWidth = $(this).parent().width();
 		    		var fromTop = $(this).offset().top - scrollTop;
 		    		$(this).css({left: (fromTop- $(this).height()/2)/3});
 		    	})
 		    	
 		    	// top/bottom-scrolling parallax
-		    	$('.responsiveTop').each(function(){
-			    	
+		    	$('*.responsiveTop').each(function(){
+			    	var parentHeight = $(this).parent().outerHeight();
+			    	var fromTop = $(this).offset().top - scrollTop;
+			    	$(this).css({bottom: (fromTop- $(this).height()/2)/3});
 		    	})
-		    	$('.responsiveBottom').each(function(){
-			    	
+		    	$('*.responsiveBottom').each(function(){
+			    	var parentHeight = $(this).parent().outerHeight();
+			    	var fromTop = $(this).offset().top - scrollTop;
+			    	$(this).css({top: (fromTop- $(this).height()/2)/3});
 		    	})
 	    	});
     	});
