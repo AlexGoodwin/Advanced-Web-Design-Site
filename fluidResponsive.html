@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>fluid responsive</title>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+		/* global styles */
+		*,
+		*:before,
+		*:after {
+			margin: 0;
+			padding: 0;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		 ul li {list-style-type: none;}
+
+		 .hide {display:none;}
+
+		 .left {float:left;}
+		 .right {float:right;}
+		 .clearfix {
+		 	display:table;
+		 	content: " ";
+		 	clear:both;
+		 }
+		
+		body { 
+			background: rgba(109,125,141,1);
+			margin: 0 10px;
+				}
+		.container {
+			max-width: 960px;
+			margin: 0 auto;
+		}
+
+		.boxy {
+			background: rgba(255,255,255,0.8);
+			border: solid 2px rgba(0,0,0,0.8);
+			margin-bottom: 20px;
+			padding: 5px 10px;
+		}
+		header h1 {font-size: 3em !important;}
+
+		.main-article {width:60%;}
+		.main-aside {width: 38%;}
+
+
+
+    /* mobile */
+    @media only screen and (max-width: 480px){
+    	.main-article {width: 100%; clear: both;}
+    	.main-aside {width: 100%; clear: both;}
+    	.boxy {margin-bottom: 5px}
+    	header h1 {font-size: 1.5em !important;}
+    }
+    
+    
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header class="boxy">
+			<h1><i class="fa fa-gamepad"></i>fluid responsive</h1>
+		</header>
+		<nav class="boxy">
+			<ul>
+				<li><a href="#">link</a></li>
+			</ul>
+		</nav>
+		<section class="clearfix">
+			<h2 class="hide"> section heading </h2>
+			<article class="boxy left main-article">
+				<h3> article heading</h3>
+				<p>Wayfarers Godard photo booth, VHS flexitarian Williamsburg American Apparel Shoreditch roof party gentrify Odd Future fashion axe hashtag. Master cleanse fixie you probably haven't heard of them roof party meh. Chia American Apparel gastropub pug Intelligentsia. PBR&B XOXO skateboard, YOLO gentrify Bushwick squid master cleanse artisan selfies Shoreditch cred craft beer sustainable slow-carb. Irony next level scenester tilde whatever PBR&B. Chillwave biodiesel hella, dreamcatcher PBR&B swag American Apparel brunch beard yr seitan Bushwick lo-fi. Narwhal bespoke trust fund, stumptown squid post-ironic readymade pug whatever twee crucifix Portland.</p>
+				
+				<img src="http://placehold.it/400x250" style="max-width: 100%; float: left; padding: 5px 15px 5px 0;">
+	
+				<p>Raw denim pop-up next level, gluten-free Pinterest church-key brunch dreamcatcher McSweeney's flannel organic trust fund. Pug Brooklyn quinoa, ennui forage literally iPhone fap keffiyeh sriracha. Bushwick Helvetica farm-to-table fashion axe, 90's High Life keytar you probably haven't heard of them drinking vinegar Echo Park banjo. Narwhal jean shorts pork belly, forage Blue Bottle you probably haven't heard of them umami beard quinoa. McSweeney's yr fanny pack direct trade. Wolf salvia 3 wolf moon food truck tousled. Narwhal heirloom American Apparel YOLO, vegan skateboard meh roof party organic post-ironic you probably haven't heard of them mixtape fingerstache.</p>
+			</article>
+			<aside class="boxy right main-aside">
+				<h3> aside heading</h3>
+				<p>
+				Raw denim pop-up next level, gluten-free Pinterest church-key brunch dreamcatcher McSweeney's flannel organic trust fund. Pug Brooklyn quinoa, ennui forage literally iPhone fap keffiyeh sriracha. Bushwick Helvetica farm-to-table fashion axe, 90's High Life keytar you probably haven't heard of them drinking vinegar Echo Park banjo. Narwhal jean shorts pork belly, forage Blue Bottle you probably haven't heard of them umami beard quinoa. McSweeney's yr fanny pack direct trade. Wolf salvia 3 wolf moon food truck tousled. Narwhal heirloom American Apparel YOLO, vegan skateboard meh roof party organic post-ironic you probably haven't heard of them mixtape fingerstache.
+			</p>
+			</aside>	
+		</section>     
+		<footer class="boxy">
+			<ul>
+				<li>twitter</li>
+			</ul>	
+		</footer>
+	</div><!-- /.container -->		
+</body>
+</html>
