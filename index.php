@@ -17,7 +17,7 @@
 		<? include('nav.php');?>
 	    
 	     <section class="grid-100 grid-parent overview" id="dm1">
-	    	<div class="paraBackground zoom" style="background-image: url('img/dark_wood.jpg');"></div>
+	    	<div class="paraBackground zoom" style="background-image: url('img/blimp.jpg');"></div>
 	    
 	    	<h2>Fall 2014: Digital Media 1</h2>
 	    
