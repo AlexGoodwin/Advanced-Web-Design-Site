@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/loraxStyle.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        
+        <!-- fonts -->
+		<script src="//use.typekit.net/ote6eux.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+        
+        
+    </head>
+    <body style="width: 1276px; margin: 0 auto;">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="darkGrass" class="intro"></div>
+		<div id="grass" class="intro"></div>
+		
+        <img src="img/red_tree.png" 	class="tree" id="tree1">
+        <img src="img/yellow_tree.png" 	class="tree" id="tree2">
+        <img src="img/red_tree.png" 	class="tree" id="tree3">
+        <img src="img/yellow_tree.png" 	class="tree" id="tree4">
+		<img src="img/yellow_tree.png" 	class="tree" id="tree8">
+		<img src="img/red_tree.png" 	class="tree" id="tree9">
+		<img src="img/yellow_tree.png" 	class="tree" id="tree10">
+		<img src="img/red_tree.png" 	class="tree" id="tree11">
+		
+		<img src="img/stump.png" class="stump" id="stump1">
+		<img src="img/stump.png" class="stump" id="stump2">
+		<img src="img/stump.png" class="stump" id="stump3">
+		<img src="img/stump.png" class="stump" id="stump4">
+		<img src="img/stump.png" class="stump" id="stump5">
+		<img src="img/stump.png" class="stump" id="stump6">
+		<img src="img/stump.png" class="stump" id="stump7">
+		<img src="img/stump.png" class="stump" id="stump8">
+		<img src="img/stump.png" class="stump" id="stump9">
+		
+		<img src="img/wind.png" class="wind" id="wind1">
+		<img src="img/wind.png" class="wind" id="wind2">
+		<img src="img/wind.png" class="wind" id="wind3">
+		<img src="img/wind.png" class="wind" id="wind4">
+		<img src="img/wind.png" class="wind" id="wind5">
+		<img src="img/wind.png" class="wind" id="wind6">
+		<img src="img/wind.png" class="wind" id="wind7">
+		
+		<img src="img/shadow.png" id="shadow">
+		
+		<img src="img/barbaloots.png" id="barbaloots">
+		
+		<audio id="falling">
+			<source src="treeFalling.mp3">
+		</audio>
+		<audio id="axe">
+			<source src="axe.mp3">
+		</audio>
+		
+		<div class="story">
+			<h1>The Lorax</h1>
+			<p id="author">- by Dr. Suess -</p>
+			
+			<img src="img/lorax.png" style="margin-bottom: 100px;">
+			
+			<!-- story -->		
+			<p>At the far end of town<br>
+where the Grickle-grass grows<br>
+and the wind smells slow-and-sour when it blows<br>
+and no birds ever sing excepting old crows...<br>
+is the Street of the Lifted Lorax.</p>
+			<p>And deep in the Grickle-grass, some people say,<br>
+if you look deep enough you can still see, today,<br>
+where the Lorax once stood<br>
+just as long as it could<br>
+before somebody lifted the Lorax away.</p>
+			<p>What was the Lorax?<br>
+And why was it there?<br>
+And why was it lifted and taken somewhere<br>
+from the far end of town where the Grickle-grass grows?</p>
+			<p>The old Once-ler still lives here.<br>
+Ask him. He knows.</p>
+			<p>You won't see the Once-ler.<br>
+Don't knock at his door.</p>
+			<p>He stays in his Lerkim on top of his store.<br>
+He lurks in his Lerkim, cold under the roof,<br>
+where he makes his own clothes<br>
+out of miff-muffered moof.</p>
+			<p>And on special dank midnights in August,<br>
+he peeks out of the shutters<br>
+and sometimes he speaks<br>
+and tells how the Lorax was lifted away.</p>
+			<p>He'll tell you, perhaps...<br>
+if you're willing to pay.</p>
+
+			<p>On the end of a rope<br>
+he lets down a tin pail<br>
+and you have to toss in fifteen cents<br>
+and a nail<br>
+and the shell of a great-great-great-<br>
+grandfather snail.</p>
+			<p>Then he pulls up the pail,<br>
+makes a most careful count<br>
+to see if you've paid him<br>
+the proper amount.</p>
+			<p>Then he hides what you paid him<br>
+away in his Snuvv,<br>
+his secret strange hole<br>
+in his gruvvulous glove.</p>
+			<p>Then he grunts, "I will call you by Whisper-ma-Phone,<br>
+for the secrets I tell you are for your ears alone." </p>
+			<p id="slup">SLUPP!</p>
+			<p>Down slupps the Whisper-ma-Phone to your ear<br>
+and the old Once-ler's whispers are not very clear,<br>
+since they have to come down<br>
+through a snergelly hose,<br>
+and he sounds<br>
+as if he had<br>
+smallish bees up his nose.</p>
+			<p>"Now I'll tell you,"<br>
+			he says, with his teeth sounding gray,<br>
+"how the Lorax got lifted and taken away..."</p>
+
+	<p>It all started way back...<br>
+such a long, long time back...</p>
+	<p>Way back in the days when the grass was still green<br>
+and the pond was still wet<br>
+and the clouds were still clean,<br>
+and the song of the Swomee-Swans rang out in space...</p>
+	<p>one morning, I came to this glorious place.<br>
+And I first saw the trees!<br>
+The Truffula Trees!<br>
+The bright-colored tufts of the Truffula Trees!</p>
+	<p>Mile after mile in the fresh morning breeze.<br>
+And, under the trees, I saw Brown Bar-ba-loots<br>
+frisking about in their Bar-ba-loot suits<br>
+as they played in the shade and ate Truffula fruits.</p>
+	<p>From the rippulous pond<br>
+came the comfortable sound<br>
+of the Humming-Fish humming<br>
+while splashing around.</p>
+
+	<p>But those trees! Those trees!<br>
+Those Truffula Trees!<br>
+All my life I'd been searching<br>
+for trees such as these.</p>
+	<p>The touch of their tufts<br>
+was much softer than silk.<br>
+And they had the sweet smell<br>
+of fresh butterfly milk.</p>
+	<p>I felt a great leaping<br>
+of joy in my heart.<br>
+I knew just what I'd do!<br>
+I unloaded my cart.</p>
+	<p>In no time at all, I had built a small shop.<br>
+Then I chopped down a Truffula Tree with one chop.</p>
+	<p>And with great skillful skill and with great speedy speed,<br>
+I took the soft tuft, and I knitted a Thneed!<br>
+The instant I'd finished, I heard a ga-Zump!</p>
+	<p>I looked.<br>
+I saw something pop out of the stump<br>
+of the tree I'd chopped down. It was sort of a man.<br>
+Describe him?... That's hard. I don't know if I can.</p>
+
+	<p>He was shortish. And oldish.<br>
+And brownish. And mossy.<br>
+And he spoke with a voice<br>
+that was sharpish and bossy.</p>
+	<p>"Mister!" he said with a sawdusty sneeze,<br>
+"I am the Lorax. I speak for the trees.<br>
+I speak for the trees, for the trees have no tongues.<br>
+And I'm asking you, sir, at the top if my lungs"-<br>
+he was very upset as he shouted and puffed-<br>
+"What's that THING you've made out of my Truffula tuft?"</p>
+	<p>"Look, Lorax," I said."There's no cause for alarm.<br>
+I chopped just one tree. I am doing no harm.<br>
+I'm being quite useful. This thing is a Thneed.<br>
+A Thneed's a Fine-Something-That-All-People-Need!</p>
+	<p>It's a shirt. It's a sock. It's a glove, It's a hat.<br>
+But it has other uses. Yes, far beyond that.<br>
+You can use it for carpets. For pillows! For sheets!<br>
+Or curtains! Or covers for bicycle seats!"</p>
+	<p>The Lorax said,<br>
+"Sir! You are crazy with greed.<br>
+There is no one on earth<br>
+who would buy that fool Thneed!"</p>
+
+	<p>But the very next minute I proved he was wrong.<br>
+For, just at that minute, a chap came along,<br>
+and he thought the Thneed I had knitted was great.</p>
+	<p>He happily bought it for three ninety-eight<br>
+I laughed at the Lorax, "You poor stupid guy!<br>
+You never can tell what some people will buy."</p>
+	<p>"I repeat," cried the Lorax,<br>
+"I speak for the trees!"</p>
+	<p>"I'm busy," I told him.<br>
+"Shut up, if you please."</p>
+	<p>I rushed 'cross the room, and in no time at all,<br>
+built a radio-phone. I put in a quick call.<br>
+I called all my brothers and uncles and aunts<br>
+and I said, "Listen here! Here's a wonderful chance<br>
+for the whole Once-ler Family to get mighty rich!<br>
+Get over here fast! Take the road to North Nitch.<br>
+Turn left at Weehawken. Sharp right at South Stitch."</p>
+	<p>And, in no time at all,<br>
+in the factory I built,<br>
+the whole Once-ler Family<br>
+was working full tilt.</p>
+	<p>We were all knitting Thneeds<br>
+just as busy as bees,<br>
+to the sound of the chopping<br>
+of Truffula Trees. </p>
+
+	<p>Then...<br>
+Oh! Baby! Oh!<br>
+How my business did grow!<br>
+Now, chopping one tree<br>
+at a time<br>
+was too slow.</p>
+	<p>So I quickly invented my Super-Axe-Hacker<br>
+which whacked off four Truffula Trees at one smacker.<br>
+We were making Thneeds<br>
+four times as fast as before!<br>
+And that Lorax?...<br>
+He didn't show up any more.</p>
+	<p>But the next week<br>
+he knocked<br>
+on my new office door.</p>
+	<p>He snapped, "I am the Lorax who speaks for the trees<br>
+which you seem to be chopping as fast as you please.<br>
+But I'm also in charge of the Brown Bar-ba-loots<br>
+who played in the shade in their Bar-ba-loot suits<br>
+and happily lived, eating Truffula Fruits.</p>
+	<p>"NOW... thanks to your hacking my trees to the ground,<br>
+there's not enought Truffula Fruit to go 'round.<br>
+And my poor Bar-ba-loots are all getting the crummies<br>
+because they have gas, and no food, in their tummies!</p>
+	<p>"They loved living here. But I can't let them stay.<br>
+They'll have to find food. And I hope that they may.<br>
+Good luck, boys," he cried. And he sent them away.</p>
+	<p>I, the old Once-ler, felt sad<br>
+as I watched them all go.<br>
+BUT...<br>
+business is business!<br>
+And business must grow<br>
+regardless of crummies in tummies, you know.</p>
+
+	<p>I meant no harm. I most truly did not.<br>
+But I had to grow bigger. So bigger I got.</p>
+	<p>I biggered my factory. I biggered my roads.<br>
+I biggered my wagons. I biggered the loads<br>
+of the Thneeds I shipped out. I was shipping them forth to the South! To the East! To the West! To the North!</p>
+	<p>I went right on biggering... selling more Thneeds.<br>
+And I biggered my money, which everyone needs.</p>
+	<p>Then again he came back! I was fixing some pipes<br>
+when that old-nuisance Lorax came back with more gripes.<br>
+"I am the Lorax," he coughed and he whiffed.<br>
+He sneezed and he snuffled. He snarggled. He sniffed.<br>
+"Once-ler!" he cried with a cruffulous croak.<br>
+"Once-ler! You're making such smogulous smoke!</p>
+	<p>My poor Swomee-Swans... why, they can't sing a note!<br>
+No one can sing who has smog in his throat.</p>
+	<p>"And so," said the Lorax,<br>
+"-please pardon my cough-<br>
+they cannot live here.<br>
+So I'm sending them off.</p>
+	<p>"Where will they go?...<br>
+I don't hopefully know.<br>
+They may have to fly for a month... or a year...<br>
+To escape from the smog you've smogged up around here.</p>
+
+	<p>"What's more," snapped the Lorax. (His dander was up.)<br>
+"Let me say a few words about Gluppity-Glupp.<br>
+Your machine chugs on, day and night without stop<br>
+making Gluppity-Glupp. Also Schloppity-Schlopp.<br>
+And what do you do with this leftover goo?...<br>
+I'll show you. You dirty old Once-ler man, you!</p>
+	<p>"You're glumping the pond where the Humming-Fish hummed!<br>
+No more can they hum, for their gills are all gummed.<br>
+So I'm sending them off. Oh, their future is dreary.<br>
+They'll walk on their fins and get woefully weary<br>
+in search of some water that isn't so smeary."</p>
+	<p>And then I got mad.<br>
+I got terribly mad.<br>
+I yelled at the Lorax, "Now listen here, Dad!<br>
+All you do is yap-yap and say, 'Bad! Bad! Bad! Bad!'<br>
+Well, I have my rights, sir, and I'm telling you<br>
+I intend to go on doing just what I do!<br>
+And, for your information, you Lorax, I'm figgering<br>
+On biggering<br>
+and BIGGERING<br>
+and BIGGERING<br>
+and BIGGERING,<br>
+turning MORE Truffula Trees into Thneeds<br>
+which everyone, EVERYONE, EVERYONE needs!"</p>
+	<p>And at that very moment, we heard a loud whack!<br>
+From outside in the fields came a sickening smack<br>
+of an axe on a tree. Then we heard the tree fall.<br>
+The very last Truffula Tree of them all! </p>
+
+	<p>No more trees. No more Thneeds. No more work to be done.<br>
+So, in no time, my uncles and aunts, every one,<br>
+all waved me good-bye. They jumped into my cars<br>
+and drove away under the smoke-smuggered stars.</p>
+	<p>Now all that was left 'neath the bad smelling-sky<br>
+was my big empty factory...<br>
+the Lorax...<br>
+and I.</p>
+	<p>The Lorax said nothing. Just gave me a glance...<br>
+just gave me a very sad, sad backward glance...<br>
+as he lifted himself by the seat of his pants.</p>
+	<p>And I'll never forget the grim look on his face<br>
+when he heisted himself and took leave of this place,<br>
+through a hole in the smog, without leaving a trace.<br>
+And all that the Lorax left here in this mess<br>
+was a small pile of rocks, with one word...</p>
+	<p>"UNLESS."</p>
+	<p>Whatever that meant, well, I just couldn't guess.</p>
+
+	<p>That was long, long ago.<br>
+But each day since that day<br>
+I've sat here and worried<br>
+and worried away.</p>
+	<p>Through the years, while my buildings<br>
+have fallen apart,<br>
+I've worried about it<br>
+with all of my heart.</p>
+	<p>"But now," says the Once-ler,<br>
+"Now that you're here,<br>
+the word of the Lorax seems perfectly clear.<br>
+UNLESS someone like you<br>
+cares a whole awful lot,<br>
+nothing is going to get better.<br>
+It's not.</p>
+	<p>"SO...<br>
+Catch!" calls the Once-ler.<br>
+He lets something fall.<br>
+"It's a Truffula Seed.<br>
+It's the last one of all!<br>
+You're in charge of the last of the Truffula Seeds.<br>
+And Truffula Trees are what everyone needs.<br>
+Plant a new Truffula.Treat it with care.<br>
+Give it clean water. And feed it fresh air.<br>
+Grow a forest. Protect it from axes that hack.</p>
+	<p style="margin-bottom: 150px;">Then the Lorax<br>
+and all of his friends<br>
+may come back."</p>
+			<img src="img/Unless.png" id="unless">
+		</div>
+		
+		<a href="#" id="scrollDown"></a>
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        
+        <script>
+        	$(document).ready(function(){
+        		// thwack noise
+        		var falling = $("#falling")[0];
+        		var axe = $("#axe")[0];
+        	
+        	
+        		$('#shadow').css({width: 500});
+	        	// shadow effect
+	        	$('div.story').scroll(function(){
+	        		var scroll = $(this).scrollTop();
+	        	
+	        		var shadowCenter = ($(window).width() - $('#shadow').width())/2;
+	        		
+	        		var shadowBottom = 440 - scroll;
+	        		
+	        		if(scroll < 500){
+						$('#shadow').css({width: (500 - scroll), left: shadowCenter, top: (450 + scroll/5)});
+					}
+					else{
+						$('#shadow').css({width: 0});
+					}
+					
+					// trees falling down
+						if(scroll <= 1600){
+							$('.tree').each(function(){
+								$(this).removeClass('fallDown');
+							})
+						}
+
+						if(scroll > 1600){
+							if(!$('#tree1').hasClass('fallDown')){
+								axe.play();
+								setTimeout(function(){$('#tree1').addClass('fallDown')}, 200);
+							}
+						}
+						if(scroll > 3200){
+							if(!$('#tree2').hasClass('fallDown')){
+								axe.play();
+								setTimeout(function(){$('#tree2').addClass('fallDown')}, 200);
+							}
+						}
+						if(scroll > 4800){
+							if(!$('#tree3').hasClass('fallDown')){
+								axe.play();
+								setTimeout(function(){$('#tree3').addClass('fallDown')}, 200);
+							}
+						}
+						if(scroll > 6400){
+							if(!$('#tree8').hasClass('fallDown')){
+								axe.play();
+								setTimeout(function(){$('#tree8').addClass('fallDown')}, 200);
+							}
+						}
+						if(scroll > 8000){
+							if(!$('#tree9').hasClass('fallDown')){
+								axe.play();
+								setTimeout(function(){$('#tree9').addClass('fallDown')}, 200);
+							}
+						}
+						if(scroll > 9600){
+							if(!$('#tree10').hasClass('fallDown')){
+								axe.play();
+								setTimeout(function(){$('#tree10').addClass('fallDown')}, 200);
+							}
+						}
+						if(scroll > 11200){
+							if(!$('#tree11').hasClass('fallDown')){
+								axe.play();
+								setTimeout(function(){$('#tree11').addClass('fallDown')}, 200);
+							}
+						}
+						if(scroll > 11000){
+							if(!$('#tree4').hasClass('fallDown')){
+								falling.play();
+								setTimeout(function(){$('#tree4').addClass('fallDown')}, 7500);
+							}
+						}
+						
+						//barbalot march
+						if(scroll > 10000){
+							if(!$('#barbaloots').hasClass('march')){
+								$('#barbaloots').addClass('march');
+							}
+						}
+						else{
+						}
+					
+	        	});
+	        	
+	        	$('#scrollDown').on('click',function(){
+		        	if($('div.story').scrollTop() < 500){
+			        	$('div.story').animate({ scrollTop: $('div.story').scrollTop() + 600 });
+		        	}
+		        	else{
+			        	$('div.story').animate({ scrollTop: $('div.story').scrollTop() + 250 });
+		        	}
+		        	
+	        	});
+        	});
+        </script>
+
+    </body>
+</html>

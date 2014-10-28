@@ -29,10 +29,14 @@
 	   
 	   // controls full-screen of home screen banner
 	   bannerResize();
+	   overviewResize();
+	   verticallyCenter();
 	});
 	
 	$(window).resize(function(){
 		bannerResize();
+		overviewResize();
+		verticallyCenter();
 	});
 	
 	function bannerResize(){
@@ -40,6 +44,30 @@
 	   
 	   var h1margin = ($('#banner').height() - $('#banner h1').height())/2;
 	   $('#banner h1').css({marginTop: h1margin});
+	}
+	
+	function overviewResize(){
+		$('section.overview').each(function(){
+			var windowHeight = $(window).height();
+			if($(this).outerHeight() < windowHeight){
+				$(this).css({height: windowHeight - $('nav').outerHeight()});
+			}
+		})
+	}
+	
+	function verticallyCenter(){
+		$('*.verticallyCenter').each(function(){
+			if($(this).prev().prop('tagName') == 'H2'){
+				var m = ($(this).parent().height() - $(this).prev('h2').outerHeight() - $(this).height())/2;
+			}
+			else{
+				var m = ($(this).parent().height() - $(this).height())/2;	
+			}
+			$(this).css({
+				marginTop: m,
+				marginBottom: m
+			});
+		})
 	}
 	
 	$(window).scroll(function(){

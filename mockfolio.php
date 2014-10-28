@@ -231,6 +231,8 @@
 			 </div>
 		 </div>
 		 
+		 <div class="clearfix"></div>
+		 
 		 <div class="headerText grid-100 marginAuto">
 		 	<div class="grid-50">
 		 		<h2>About Me</h2>
