@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+        
+        <!-- unsemantic framework -->
+        <link rel="stylesheet" href="../css/unsemantic-grid-responsive.css">
+        
+        <!-- font awesome -->
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <style>
+        	#sideNav{
+	        	background: rgba(0,0,0,.2);
+				width: 100px;
+	        	height: 100vh;
+	        	float: left;
+	        	transition: width .5s ease;
+	        	position: fixed;
+        	}
+        	
+        		#sideNav ul{
+	        		padding: 0;
+	        		margin: 0;
+        		}
+        		#sideNav ul li{
+        			text-align: center;
+        		}
+        		#sideNav ul li a{
+					color: #FFF;
+					text-decoration: none;
+					width: 100%;
+					display: table;
+					height: 16.6667vh;
+					line-height: 16.6667vh;
+/* 					transition: all .5s linear; */
+        		}
+        		
+        		#sideNav ul li a i{
+        			display: table-cell;
+        			vertical-align: middle;
+					width: 100%;
+					transition: all .5s ease;
+        		}
+        		
+        		#sideNav ul li a span{
+					width: 0;
+        			max-width: 0;
+        			display: table-cell;
+        			vertical-align: middle;
+        			text-align: left;
+					opacity: 0;
+					transition: width .5s ease;
+					transition: opacity .3s ease;
+					line-height: 30px;
+					margin: 0 10px;
+        		}
+        		
+        		#sideNav ul li a:hover{
+	        		background: rgba(0,0,0,.4);
+        		}
+        		
+        		#sideNav:hover{
+	        		width: 300px;
+	        		transition: width .5s ease;
+        		}
+        		
+        		#sideNav:hover i{
+	        		width: 30%;
+	        		transition: all .5s ease;
+        		}
+        		
+        		#sideNav:hover span{
+					width: 70%;
+	        		opacity: 1;
+	        		transition: all .3s .3s ease;
+        		}
+        		
+        		#sideNav a.current{
+	        		background: rgba(0,0,0,.5);
+        		}
+        	
+        	.background{
+	        	height: 100vh;
+	        	width: 100%;
+	        	padding-left: 100px;
+	        	display: table;
+	        	background-position: center bottom;
+	        	background-size: cover;
+        	}
+        	
+        	#menu1{
+	        	background-image: url('../img/grass.jpg');
+        	}
+        	
+        	#menu2{
+	        	background-image: url('../img/skyline.jpg');
+        	}
+        	
+        	#menu3{
+	        	background-image: url('../img/lake2.jpg');
+        	}
+        	
+        	#menu4{
+	        	background-image: url('../img/camera.jpg');
+        	}
+        	
+        	#menu5{
+	        	background-image: url('../img/belief.jpg');
+	        	background-color: #0b0602;
+	        	background-repeat: no-repeat;
+	        	background-position-y: -100px;
+        	}
+        	
+        	#menu6{
+	        	background-image: url('../img/lake2.jpg');
+        	}
+        	
+        	div.essay{
+	        	position: absolute;
+	        	left: 0;
+	        	box-sizing: border-box;
+	        	margin: 20%;
+	        	height: 40%;
+	        	overflow-x: hidden;
+	        	display: inline-block;
+        	}
+        	
+        	article.essay{
+				color: #FFF;
+				display: none;
+				opacity: 0;
+				width: 10000px;
+        	}
+        	
+        		article.essay p{
+        			display: inline-block;
+        			max-width: 300px;
+        			vertical-align: top;
+        		}
+        	
+        	.title{
+				padding: 20px 40px;
+				vertical-align: bottom;
+				display: table-cell;
+				color: white;
+/* 				opacity: .8; */
+				font-family: "proxima-nova-alt";
+        	}
+        	
+        		.title h1 {
+					text-transform: uppercase;
+				  	margin: 0;
+				  	font-size: 80px;
+				  	line-height: 80px;
+				  	font-weight: 200;
+				  	padding: 0;
+				}
+
+				.title h2{
+					margin: 10px;
+					text-align: center;
+					font-size: 20px;
+					line-height: 20px;
+					display: inline-block;
+					font-weight: 200;
+				}
+				
+				span.whiteLine{
+					border-top: 2px white solid;
+					width: 174px;
+					display: inline-block;
+					height: 5px;
+					transition: width .5s ease;
+				}
+				
+			a.button{
+				background: transparent;
+				border: 1px white solid;
+				border-radius: 5px;
+				color: white;
+				text-decoration: none;
+				padding: 10px 15px;
+			}
+			
+				a.button:hover{
+					background: rgba(255,255,255,.2);
+				}
+        </style>
+        
+        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+		 <nav class="" id="sideNav">
+        	<ul>
+        		<li><a href="#menu1" class="current"><i class="fa fa-home"></i> <span>Home</span></a></li>
+        		<li><a href="#menu2"><i class="fa fa-male"></i> <span>Tableau</span></a></li>
+        		<li><a href="#menu3"><i class="fa fa-cutlery"></i> <span>Veg Head</span></a></li>
+        		<li><a href="#menu4"><i class="fa fa-picture-o"></i> <span>Sequential Images</span></a></li>
+        		<li><a href="#menu5"><i class="fa fa-check-square-o"></i> <span>I Believe</span></a></li>
+        		<li><a href="#menu6"><i class="fa fa-video-camera"></i> <span>Stop Motion</span></a></li>
+        	</ul>
+        </nav>
+        
+        
+        <!-- CONTENT -->
+		<section class="grid-parent grid-100 background" id="menu1">
+	        <div class="title">
+		        <h1>Alex Goodwin</h1>
+		        <span class="whiteLine"></span>
+		        <h2>Design & Development</h2>
+		        <span class="whiteLine"></span>
+	        </div>
+		</section> <!-- /#background -->
+		
+		<section class="grid-parent grid-100 background" id="menu2">
+	        <div class="title">
+		        <h1>Tableau</h1>
+		        <span class="whiteLine"></span>
+		        <h2>Design & Development</h2>
+		        <span class="whiteLine"></span>
+	        </div>
+		</section> <!-- /#background -->
+		
+		<section class="grid-parent grid-100 background" id="menu3">
+	        <div class="title">
+		        <h1>Veg Head</h1>
+		        <span class="whiteLine"></span>
+		        <h2>Design & Development</h2>
+		        <span class="whiteLine"></span>
+	        </div>
+		</section> <!-- /#background -->
+		
+		<section class="grid-parent grid-100 background" id="menu4">
+	        <div class="title">
+		        <h1>Sequential Images</h1>
+		        <span class="whiteLine"></span>
+		        <h2>Design & Development</h2>
+		        <span class="whiteLine"></span>
+	        </div>
+		</section> <!-- /#background -->
+		
+		<section class="grid-parent grid-100 background" id="menu5">
+	        <div class="title">
+		        <h1>This I Believe</h1>
+		        <span class="whiteLine" style="width: 334px;"></span>
+		        <h2><a href="javascript:moveBackground('#menu5');" class="button" id="readTheEssay">Read the Essay</a></h2>
+	        </div>
+	        
+	        <div class="essay">
+		        <article class="essay">
+		        	<p>I believe in always improving.</p>
+					<p>Whether it’s training physically, such as for sports or one’s health, emotionally, wherein one learns from experiences and how to better treat others and themselves, or mentally, such as in growth of knowledge and experience, improvement is what ties each day into the next.</p> 
+					
+					<p>The feeling of accomplishment that comes from evidence of improvement is one of my biggest motivators. If today I am better than yesterday, chances are it’s a good day. If tomorrow I’ll be further along on a project, have a better understanding of a class, or even just have another day of experience in something, that’s often enough to keep me going through the day. Better is better, and better is motivating.</p>
+	
+					<p>Whether it’s training physically, such as for sports or one’s health, emotionally, wherein one learns from experiences and how to better treat others and themselves, or mentally, such as in growth of knowledge and experience, improvement is what ties each day into the next.</p> 
+					
+					<p>The feeling of accomplishment that comes from evidence of improvement is one of my biggest motivators. If today I am better than yesterday, chances are it’s a good day. If tomorrow I’ll be further along on a project, have a better understanding of a class, or even just have another day of experience in something, that’s often enough to keep me going through the day. Better is better, and better is motivating.</p>
+					
+					<p>Whether it’s training physically, such as for sports or one’s health, emotionally, wherein one learns from experiences and how to better treat others and themselves, or mentally, such as in growth of knowledge and experience, improvement is what ties each day into the next.</p> 
+					
+					<p>The feeling of accomplishment that comes from evidence of improvement is one of my biggest motivators. If today I am better than yesterday, chances are it’s a good day. If tomorrow I’ll be further along on a project, have a better understanding of a class, or even just have another day of experience in something, that’s often enough to keep me going through the day. Better is better, and better is motivating.</p>
+		        </article>
+			</div>
+		</section> <!-- /#background -->
+		
+		<section class="grid-parent grid-100 background" id="menu6">
+	        <div class="title">
+		        <h1>Stop Motion</h1>
+		        <span class="whiteLine"></span>
+		        <h2>Design & Development</h2>
+		        <span class="whiteLine"></span>
+	        </div>
+		</section> <!-- /#background -->
+
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script type="text/javascript" src="http://use.typekit.net/ote6eux.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+            
+            function scrollToElement( target ) {
+				var topoffset = 0;
+				var speed = 400;
+				var destination = jQuery( target ).offset().top - topoffset;
+				jQuery( 'html:not(:animated),body:not(:animated)' ).animate( { scrollTop: destination}, speed, function() {
+				    window.location.hash = target;
+				});
+				return false;
+			}
+			
+			$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html,body').animate({
+			          scrollTop: target.offset().top
+			        }, 400);
+			        return false;
+			      }
+			    }
+			  });
+			});
+			
+			function moveBackground(element){
+				if($(element).css('background-position-y') == '-100px'){
+					$(element).animate({backgroundPositionY: $(element).height()*(-.6)}, 400, function(){
+						$('article.essay').toggle().animate({opacity: 1});
+					});
+				}
+				else{
+					$('article.essay').animate({opacity: 0}, 200, function(){
+						$(element).animate({backgroundPositionY: '-100px'}, 400, function(){
+							$('article.essay').toggle();
+						});
+					});
+				}
+			}
+			
+			$(document).scroll(function(){
+				var scroll = $(window).scrollTop();
+				
+				$('#sideNav a').each(function(){
+					var destination = '#menu' + ($(this).parent().index()+1);
+
+					if (scroll >= $(destination).position().top){
+						$('#sideNav a').removeClass('current');
+						$(this).addClass('current');
+						
+/* 						$('.title').css({opacity: .2}); */
+/* 						$(destination + '.title').animate({opacity: .9}, 1000); */
+					}
+				})
+			});
+			
+			// assign keys 1-6 to the menu
+			$(document).keydown(function(e) {
+			    switch(e.which) {
+			        case 49: // 1
+			        	scrollToElement('#menu1');
+			        break;
+			
+			        case 50: // 2
+			        	scrollToElement('#menu2');
+			        break;
+			
+			        case 51: // 3
+			        	scrollToElement('#menu3');
+			        break;
+			
+			        case 52: // 4
+			        	scrollToElement('#menu4');
+			        break;
+			        
+			        case 53: // 5
+			        	scrollToElement('#menu5');
+			        break;
+			        
+			        case 54: // 6
+			        	scrollToElement('#menu6');
+			        break;
+			
+			        default: return; // exit this handler for other keys
+			    }
+			    e.preventDefault(); // prevent the default action (scroll / move caret)
+			});
+        </script>
+    </body>
+</html>
