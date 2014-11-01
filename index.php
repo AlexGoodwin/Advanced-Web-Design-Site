@@ -4,7 +4,9 @@
     <div id="banner" class="grid-100 grid-parent">
     	<h1>Alex Goodwin</h1>
     	<div class="center">
-    		<span class="whiteLine"></span><h2>Digital Portfolio</h2><span class="whiteLine"></span>
+    		<span class="whiteLine"></span>
+    			<h2>Digital Portfolio</h2>
+    		<span class="whiteLine"></span>
     	</div>
     	
     	<div class="bottomDiv">
@@ -26,13 +28,13 @@
 		    		<img src="img/iPhone.png" class="responsiveLeft">
 		    	</div>
 		    	
-		    	<div class="grid-30 prefix-5 suffix-5 responsiveBottom verticallyCenter">
-		    		<ul class="darkTrans">
+		    	<div class="grid-30 prefix-5 suffix-5 darkTrans responsiveBottom verticallyCenter">
+		    		<ul>
 						<li><h3><a href="#">Belief Project</a></h3></li>
 						<li><h3><a href="#">Digital Media Portal</a></h3></li>
 						<li><h3>Photoshop</h3></li>
 		    		</ul>
-			    	<img src="img/shadow.png" style="width: 100%;">
+					<!-- <img src="img/shadow.png" style="width: 100%;"> -->
 		    	</div>
 			</div>
 	

@@ -100,7 +100,8 @@
 		background-color: #362914;
 		border-bottom: #594522 1px solid;
 		background-image: url('img/texture.jpg');
-		background-size: contain;
+		background-size: cover;
+		background-position: center center;
 		padding-bottom: 22px;
 	}
 	
@@ -230,8 +231,6 @@
 			 	</ul>
 			 </div>
 		 </div>
-		 
-		 <div class="clearfix"></div>
 		 
 		 <div class="headerText grid-100 marginAuto">
 		 	<div class="grid-50">
