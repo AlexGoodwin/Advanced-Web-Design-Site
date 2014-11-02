@@ -134,7 +134,8 @@
 	        	box-sizing: border-box;
 	        	margin: 20%;
 	        	height: 40%;
-	        	overflow-x: hidden;
+	        	width: 60%;
+	        	overflow-x: scroll;
 	        	display: inline-block;
         	}
         	
@@ -142,13 +143,16 @@
 				color: #FFF;
 				display: none;
 				opacity: 0;
-				width: 10000px;
+				width: 5000px;
         	}
         	
         		article.essay p{
         			display: inline-block;
         			max-width: 300px;
-        			vertical-align: top;
+        			max-height: 300px;
+        			vertical-align: middle;
+        			margin: 1em 2em;
+        			text
         		}
         	
         	.title{
@@ -265,18 +269,20 @@
 	        
 	        <div class="essay">
 		        <article class="essay">
-		        	<p>I believe in always improving.</p>
-					<p>Whether it’s training physically, such as for sports or one’s health, emotionally, wherein one learns from experiences and how to better treat others and themselves, or mentally, such as in growth of knowledge and experience, improvement is what ties each day into the next.</p> 
-					
-					<p>The feeling of accomplishment that comes from evidence of improvement is one of my biggest motivators. If today I am better than yesterday, chances are it’s a good day. If tomorrow I’ll be further along on a project, have a better understanding of a class, or even just have another day of experience in something, that’s often enough to keep me going through the day. Better is better, and better is motivating.</p>
-	
-					<p>Whether it’s training physically, such as for sports or one’s health, emotionally, wherein one learns from experiences and how to better treat others and themselves, or mentally, such as in growth of knowledge and experience, improvement is what ties each day into the next.</p> 
+		        	<h3 style="display: inline;">I believe in always improving.</h3>
+
+					<p>Whether it’s training physically, such as for sports or one’s health, emotionally, wherein one learns from experiences and how to better treat others and themselves, or mentally, such as in growth of knowledge and experience, improvement is what ties each day into the next. </p>
 					
 					<p>The feeling of accomplishment that comes from evidence of improvement is one of my biggest motivators. If today I am better than yesterday, chances are it’s a good day. If tomorrow I’ll be further along on a project, have a better understanding of a class, or even just have another day of experience in something, that’s often enough to keep me going through the day. Better is better, and better is motivating.</p>
 					
-					<p>Whether it’s training physically, such as for sports or one’s health, emotionally, wherein one learns from experiences and how to better treat others and themselves, or mentally, such as in growth of knowledge and experience, improvement is what ties each day into the next.</p> 
+					<p>Let’s take my job for example. For the most part, I’m a web designer and occasional developer. I started about 5 or 6 years ago, and learn something new every time I open up photoshop, coda, or a browser to find the answer to a question I have. Learning something new most days time 5 or 6 years… is a lot of improvement. Comparing my current projects to those I made in high school brings me a warm feeling of accomplishment- sure, I made something I thought was kind of cool at the time, but the stark difference in ability and experience between projects shows tangible progress. What’s more is that I know I’m only into my first 5 years as a designer/developer, with many, many more to go. If I’ve come this far in a relatively short time, it’s exciting and encouraging to know where I’ll be in the future. I suppose that’s why I enjoy my job- I’m always improving, and can see the results. </p>
 					
-					<p>The feeling of accomplishment that comes from evidence of improvement is one of my biggest motivators. If today I am better than yesterday, chances are it’s a good day. If tomorrow I’ll be further along on a project, have a better understanding of a class, or even just have another day of experience in something, that’s often enough to keep me going through the day. Better is better, and better is motivating.</p>
+					<p>Another realm to consider is my academic career. I’m proud of how much I’ve learned, and enjoy seeing dots connect between different classes and subjects. Human patterns we learned about in history class, popping up in human-computer interaction studies? Cool. That trick I learned in 2nd grade for multiplying things by 9, appearing on homework for programming algorithms? Oddly satisfying. The more I learn, the more I want to learn and figure out- all of which comes back to the motivating factor of improvement. </p>
+					
+					<p>What about improvement as a group? This can be a bit trickier to quantify. Members join, members leave, and there’s almost always more factors at play than with an individual. “Better” can have a wide variety of implications- is a bigger group better? A more active one? Less complaints? Hard to say. However, a well-run group should set goals to improve- a process that, when done right, includes methods of quantifying progress and improvement. As head of the snowboard team here at CU, my team and I have tracked these goals in terms of membership, active involvement, budgets, and competitive success. Since joining, we’ve almost quadrupled the size of the team, dramatically increase the number of events and competitions throughout the year, and gained the respect of both our club sports peers and administration alike. I'd call that progress!</p> 
+					
+					<p>On the other hand, physical progress is much easier to measure. Being able to lift more, run longer, or shoot with more accuracy are quantifiable measurements- one can simply compare last week’s results to this week’s, and note the differences. Those numbers are motivating- seeing consistent improvement fosters continuous improvement, and getting into the groove of improving is a great spot to be.</p> 
+
 		        </article>
 			</div>
 		</section> <!-- /#background -->
@@ -333,67 +339,71 @@
 			});
 			
 			function moveBackground(element){
+				// open it
 				if($(element).css('background-position-y') == '-100px'){
 					$(element).animate({backgroundPositionY: $(element).height()*(-.6)}, 400, function(){
 						$('article.essay').toggle().animate({opacity: 1});
+						$('#readTheEssay').text('Close the Essay');
 					});
 				}
+				//close it
 				else{
 					$('article.essay').animate({opacity: 0}, 200, function(){
 						$(element).animate({backgroundPositionY: '-100px'}, 400, function(){
 							$('article.essay').toggle();
+							$('#readTheEssay').text('Read the Essay');
 						});
 					});
 				}
 			}
 			
-			$(document).scroll(function(){
-				var scroll = $(window).scrollTop();
+			$(document).ready(function(){
+				$(document).scroll(function(){
+					var scroll = $(window).scrollTop();
+					
+					$('#sideNav a').each(function(){
+						var destination = '#menu' + ($(this).parent().index()+1);
+	
+						if (scroll >= $(destination).position().top){
+							$('#sideNav a').removeClass('current');
+							$(this).addClass('current');
+						}
+					})
+				});
 				
-				$('#sideNav a').each(function(){
-					var destination = '#menu' + ($(this).parent().index()+1);
-
-					if (scroll >= $(destination).position().top){
-						$('#sideNav a').removeClass('current');
-						$(this).addClass('current');
-						
-/* 						$('.title').css({opacity: .2}); */
-/* 						$(destination + '.title').animate({opacity: .9}, 1000); */
-					}
-				})
+				// assign keys 1-6 to the menu
+				$(document).keydown(function(e) {
+				    switch(e.which) {
+				        case 49: // 1
+				        	scrollToElement('#menu1');
+				        break;
+				
+				        case 50: // 2
+				        	scrollToElement('#menu2');
+				        break;
+				
+				        case 51: // 3
+				        	scrollToElement('#menu3');
+				        break;
+				
+				        case 52: // 4
+				        	scrollToElement('#menu4');
+				        break;
+				        
+				        case 53: // 5
+				        	scrollToElement('#menu5');
+				        break;
+				        
+				        case 54: // 6
+				        	scrollToElement('#menu6');
+				        break;
+				
+				        default: return; // exit this handler for other keys
+				    }
+				    e.preventDefault(); // prevent the default action (scroll / move caret)
+				});
 			});
 			
-			// assign keys 1-6 to the menu
-			$(document).keydown(function(e) {
-			    switch(e.which) {
-			        case 49: // 1
-			        	scrollToElement('#menu1');
-			        break;
-			
-			        case 50: // 2
-			        	scrollToElement('#menu2');
-			        break;
-			
-			        case 51: // 3
-			        	scrollToElement('#menu3');
-			        break;
-			
-			        case 52: // 4
-			        	scrollToElement('#menu4');
-			        break;
-			        
-			        case 53: // 5
-			        	scrollToElement('#menu5');
-			        break;
-			        
-			        case 54: // 6
-			        	scrollToElement('#menu6');
-			        break;
-			
-			        default: return; // exit this handler for other keys
-			    }
-			    e.preventDefault(); // prevent the default action (scroll / move caret)
-			});
         </script>
     </body>
 </html>
