@@ -14,13 +14,13 @@
 
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="../css/main.css">
-        
+
         <!-- unsemantic framework -->
         <link rel="stylesheet" href="../css/unsemantic-grid-responsive.css">
-        
+
         <!-- font awesome -->
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        
+
         <style>
         	#sideNav{
 	        	background: rgba(0,0,0,.2);
@@ -29,8 +29,9 @@
 	        	float: left;
 	        	transition: width .5s ease;
 	        	position: fixed;
+	        	z-index: 2;
         	}
-        	
+
         		#sideNav ul{
 	        		padding: 0;
 	        		margin: 0;
@@ -47,14 +48,14 @@
 					line-height: 16.6667vh;
 /* 					transition: all .5s linear; */
         		}
-        		
+
         		#sideNav ul li a i{
         			display: table-cell;
         			vertical-align: middle;
 					width: 100%;
 					transition: all .5s ease;
         		}
-        		
+
         		#sideNav ul li a span{
 					width: 0;
         			max-width: 0;
@@ -67,31 +68,31 @@
 					line-height: 30px;
 					margin: 0 10px;
         		}
-        		
+
         		#sideNav ul li a:hover{
 	        		background: rgba(0,0,0,.4);
         		}
-        		
+
         		#sideNav:hover{
 	        		width: 300px;
 	        		transition: width .5s ease;
         		}
-        		
+
         		#sideNav:hover i{
 	        		width: 30%;
 	        		transition: all .5s ease;
         		}
-        		
+
         		#sideNav:hover span{
 					width: 70%;
 	        		opacity: 1;
 	        		transition: all .3s .3s ease;
         		}
-        		
+
         		#sideNav a.current{
 	        		background: rgba(0,0,0,.5);
         		}
-        	
+
         	.background{
 	        	height: 100vh;
 	        	width: 100%;
@@ -100,34 +101,113 @@
 	        	background-position: center bottom;
 	        	background-size: cover;
         	}
-        	
+
         	#menu1{
 	        	background-image: url('../img/grass.jpg');
         	}
-        	
+
         	#menu2{
-	        	background-image: url('../img/skyline.jpg');
+	        	background-image: url('../img/tweed.png');
+	        	position: relative;
+	        	background-repeat: repeat;
+	        	background-size: auto;
         	}
-        	
+
+        		#menu2 img{
+	        		height: 400px;
+	        		box-shadow: 0 0 80px rgba(0,0,0,.5);
+	        		top: 200px;
+        		}
+
+        		#menu2 img.first{
+	        		position: absolute;
+	        		left: 140px;
+        		}
+
+        		#menu2 img.first:nth-child(2){
+	        		opacity: 0;
+	        		transition: opacity .2s ease;
+	        		box-shadow: none;
+        		}
+
+        		#menu2 img.first:nth-child(2):hover{
+	        		opacity: 1;
+	        		transition: opacity .2s ease;
+        		}
+
+        		#menu2 img.second{
+	        		position: absolute;
+	        		left: 950px;
+        		}
+
+        		#menu2 img:nth-child(4){
+	        		opacity: 0;
+	        		transition: opacity .2s ease;
+	        		box-shadow: none;
+        		}
+
+        		#menu2 img:nth-child(4):hover{
+	        		opacity: 1;
+	        		transition: opacity .2s ease;
+        		}
+
+        		#menu2 span.whiteLine{
+	        		width: 108px;
+        		}
+
         	#menu3{
-	        	background-image: url('../img/lake2.jpg');
+				background-color: #222;
+	        	background-image: url('../img/Veg-Head.jpg');
+	        	background-size: contain;
+	        	background-position: 50% 50%;
+	        	background-repeat: no-repeat;
         	}
-        	
+
         	#menu4{
-	        	background-image: url('../img/camera.jpg');
+        		background-color: #000;
+	        	background-image: url('../img/tweed.png');
+	        	background-repeat: repeat;
+	        	background-size: auto;
+	        	position: relative;
         	}
-        	
+
+        		#menu4 img{
+	        		position: absolute;
+	        		width: 80%;
+	        		max-width: 760px;
+	        		left: 140px;
+					bottom: 20%;
+	        		opacity: 0;
+	        		transition: bottom .5s ease;
+        		}
+
+        		#menu4 #before{
+	        		box-shadow: 0 0  80px rgba(0,0,0,.5);
+        		}
+
+        		#menu4 span.whiteLine{
+	        		width: 322px;
+        		}
+
+        		#menu4 div.title{
+        			text-align: left;
+        		}
+
+        		img#before{
+	        		opacity: 1;
+        		}
+
         	#menu5{
 	        	background-image: url('../img/belief.jpg');
 	        	background-color: #0b0602;
 	        	background-repeat: no-repeat;
 	        	background-position-y: -100px;
         	}
-        	
+
         	#menu6{
 	        	background-image: url('../img/lake2.jpg');
         	}
-        	
+
         	div.essay{
 	        	position: absolute;
 	        	left: 0;
@@ -135,26 +215,31 @@
 	        	margin: 20%;
 	        	height: 40%;
 	        	width: 60%;
-	        	overflow-x: scroll;
+	        	overflow-x: auto;
+	        	visibility: hidden;
 	        	display: inline-block;
         	}
-        	
+
         	article.essay{
 				color: #FFF;
 				display: none;
 				opacity: 0;
-				width: 5000px;
+				visibility: visible;
+				width: 2500px;
         	}
-        	
+
+        		article.essay ::-webkit-scrollbar {
+	        		display: none;
+        		}
+
         		article.essay p{
         			display: inline-block;
         			max-width: 300px;
-        			max-height: 300px;
+        			max-height: 40vh;
         			vertical-align: middle;
         			margin: 1em 2em;
-        			text
         		}
-        	
+
         	.title{
 				padding: 20px 40px;
 				vertical-align: bottom;
@@ -163,7 +248,7 @@
 /* 				opacity: .8; */
 				font-family: "proxima-nova-alt";
         	}
-        	
+
         		.title h1 {
 					text-transform: uppercase;
 				  	margin: 0;
@@ -181,7 +266,7 @@
 					display: inline-block;
 					font-weight: 200;
 				}
-				
+
 				span.whiteLine{
 					border-top: 2px white solid;
 					width: 174px;
@@ -189,7 +274,7 @@
 					height: 5px;
 					transition: width .5s ease;
 				}
-				
+
 			a.button{
 				background: transparent;
 				border: 1px white solid;
@@ -198,12 +283,60 @@
 				text-decoration: none;
 				padding: 10px 15px;
 			}
-			
+
 				a.button:hover{
 					background: rgba(255,255,255,.2);
 				}
+
+			#hover{
+				font-family: "kremlin-pro-web";
+				font-size: 75px;
+				color: white;
+				position: absolute;
+				left: 700px;
+				top: 10px;
+			}
+
+				#hover img{
+					position: absolute;
+					top: 50px;
+					left: 120px;
+					opacity: 1;
+					height: 100px;
+					box-shadow: none;
+				}
+
+			@media screen and (max-width: 960px){
+
+				#menu4 span.whiteLine{
+					width: 170px;
+					transition: all .5s ease;
+				}
+
+				#menu4 img{
+					bottom: 250px;
+					transition: bottom .5s ease;
+				}
+
+				#menu4 div.title{
+					text-align: center;
+				}
+
+				#hover{
+					right: 50px;
+					left: auto;
+					top: 50px;
+					transition: all .5s ease;
+				}
+			}
+
+			@media screen and (max-width: 782px){
+				#menu1 span.whiteLine{
+					width: 73px;
+					transition: all .5s ease;
+				}
         </style>
-        
+
         <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -217,12 +350,12 @@
         		<li><a href="#menu2"><i class="fa fa-male"></i> <span>Tableau</span></a></li>
         		<li><a href="#menu3"><i class="fa fa-cutlery"></i> <span>Veg Head</span></a></li>
         		<li><a href="#menu4"><i class="fa fa-picture-o"></i> <span>Sequential Images</span></a></li>
-        		<li><a href="#menu5"><i class="fa fa-check-square-o"></i> <span>I Believe</span></a></li>
+        		<li><a href="#menu5"><i class="fa fa-check-square-o"></i> <span>This I Believe</span></a></li>
         		<li><a href="#menu6"><i class="fa fa-video-camera"></i> <span>Stop Motion</span></a></li>
         	</ul>
         </nav>
-        
-        
+
+
         <!-- CONTENT -->
 		<section class="grid-parent grid-100 background" id="menu1">
 	        <div class="title">
@@ -232,61 +365,72 @@
 		        <span class="whiteLine"></span>
 	        </div>
 		</section> <!-- /#background -->
-		
+
 		<section class="grid-parent grid-100 background" id="menu2">
+
+			<img class="first" src="../img/tablaeu_before.jpg">
+			<img class="first" src="../img/tablaeu_after.jpg">
+
+			<img class="second" src="../img/tablaeu2_before.jpg">
+			<img class="second" src="../img/tablaeu2_after.jpg">
+
 	        <div class="title">
 		        <h1>Tableau</h1>
 		        <span class="whiteLine"></span>
-		        <h2>Design & Development</h2>
+		        <h2>Photoshop</h2>
 		        <span class="whiteLine"></span>
 	        </div>
 		</section> <!-- /#background -->
-		
+
 		<section class="grid-parent grid-100 background" id="menu3">
-	        <div class="title">
+	        <div class="title" style="text-align: right;">
 		        <h1>Veg Head</h1>
-		        <span class="whiteLine"></span>
-		        <h2>Design & Development</h2>
-		        <span class="whiteLine"></span>
+		        <span class="whiteLine" style="width: 130px;"></span>
+		        <h2>Photoshop</h2>
+		        <span class="whiteLine" style="width: 130px;"></span>
 	        </div>
 		</section> <!-- /#background -->
-		
+
 		<section class="grid-parent grid-100 background" id="menu4">
+			<div id="hover">(Hover) <img src="../img/arrow.svg"></div>
+
+			<img src="../img/before.jpg" id="before">
+			<img src="../img/middle.jpg" id="middle">
+			<img src="../img/middle2.jpg" id="middle2">
+			<img src="../img/after.jpg" id="after">
 	        <div class="title">
 		        <h1>Sequential Images</h1>
 		        <span class="whiteLine"></span>
-		        <h2>Design & Development</h2>
+		        <h2>Photoshop</h2>
 		        <span class="whiteLine"></span>
 	        </div>
 		</section> <!-- /#background -->
-		
+
 		<section class="grid-parent grid-100 background" id="menu5">
 	        <div class="title">
 		        <h1>This I Believe</h1>
 		        <span class="whiteLine" style="width: 334px;"></span>
 		        <h2><a href="javascript:moveBackground('#menu5');" class="button" id="readTheEssay">Read the Essay</a></h2>
 	        </div>
-	        
+
 	        <div class="essay">
 		        <article class="essay">
 		        	<h3 style="display: inline;">I believe in always improving.</h3>
+					<p>Whether it’s training physically, such as for sports or one’s health, emotionally, wherein one learns from experiences and how to better treat others and themselves, or mentally, such as in growth of knowledge and experience, improvement is what ties each day into the next.</p>
 
-					<p>Whether it’s training physically, such as for sports or one’s health, emotionally, wherein one learns from experiences and how to better treat others and themselves, or mentally, such as in growth of knowledge and experience, improvement is what ties each day into the next. </p>
-					
 					<p>The feeling of accomplishment that comes from evidence of improvement is one of my biggest motivators. If today I am better than yesterday, chances are it’s a good day. If tomorrow I’ll be further along on a project, have a better understanding of a class, or even just have another day of experience in something, that’s often enough to keep me going through the day. Better is better, and better is motivating.</p>
-					
-					<p>Let’s take my job for example. For the most part, I’m a web designer and occasional developer. I started about 5 or 6 years ago, and learn something new every time I open up photoshop, coda, or a browser to find the answer to a question I have. Learning something new most days time 5 or 6 years… is a lot of improvement. Comparing my current projects to those I made in high school brings me a warm feeling of accomplishment- sure, I made something I thought was kind of cool at the time, but the stark difference in ability and experience between projects shows tangible progress. What’s more is that I know I’m only into my first 5 years as a designer/developer, with many, many more to go. If I’ve come this far in a relatively short time, it’s exciting and encouraging to know where I’ll be in the future. I suppose that’s why I enjoy my job- I’m always improving, and can see the results. </p>
-					
-					<p>Another realm to consider is my academic career. I’m proud of how much I’ve learned, and enjoy seeing dots connect between different classes and subjects. Human patterns we learned about in history class, popping up in human-computer interaction studies? Cool. That trick I learned in 2nd grade for multiplying things by 9, appearing on homework for programming algorithms? Oddly satisfying. The more I learn, the more I want to learn and figure out- all of which comes back to the motivating factor of improvement. </p>
-					
-					<p>What about improvement as a group? This can be a bit trickier to quantify. Members join, members leave, and there’s almost always more factors at play than with an individual. “Better” can have a wide variety of implications- is a bigger group better? A more active one? Less complaints? Hard to say. However, a well-run group should set goals to improve- a process that, when done right, includes methods of quantifying progress and improvement. As head of the snowboard team here at CU, my team and I have tracked these goals in terms of membership, active involvement, budgets, and competitive success. Since joining, we’ve almost quadrupled the size of the team, dramatically increase the number of events and competitions throughout the year, and gained the respect of both our club sports peers and administration alike. I'd call that progress!</p> 
-					
-					<p>On the other hand, physical progress is much easier to measure. Being able to lift more, run longer, or shoot with more accuracy are quantifiable measurements- one can simply compare last week’s results to this week’s, and note the differences. Those numbers are motivating- seeing consistent improvement fosters continuous improvement, and getting into the groove of improving is a great spot to be.</p> 
 
+					<p>Whether it’s training physically, such as for sports or one’s health, emotionally, wherein one learns from experiences and how to better treat others and themselves, or mentally, such as in growth of knowledge and experience, improvement is what ties each day into the next.</p>
+
+					<p>The feeling of accomplishment that comes from evidence of improvement is one of my biggest motivators. If today I am better than yesterday, chances are it’s a good day. If tomorrow I’ll be further along on a project, have a better understanding of a class, or even just have another day of experience in something, that’s often enough to keep me going through the day. Better is better, and better is motivating.</p>
+
+					<p>Whether it’s training physically, such as for sports or one’s health, emotionally, wherein one learns from experiences and how to better treat others and themselves, or mentally, such as in growth of knowledge and experience, improvement is what ties each day into the next.</p>
+
+					<p>The feeling of accomplishment that comes from evidence of improvement is one of my biggest motivators. If today I am better than yesterday, chances are it’s a good day. If tomorrow I’ll be further along on a project, have a better understanding of a class, or even just have another day of experience in something, that’s often enough to keep me going through the day. Better is better, and better is motivating.</p>
 		        </article>
 			</div>
 		</section> <!-- /#background -->
-		
+
 		<section class="grid-parent grid-100 background" id="menu6">
 	        <div class="title">
 		        <h1>Stop Motion</h1>
@@ -296,7 +440,7 @@
 	        </div>
 		</section> <!-- /#background -->
 
-        
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script type="text/javascript" src="http://use.typekit.net/ote6eux.js"></script>
@@ -312,7 +456,7 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
-            
+
             function scrollToElement( target ) {
 				var topoffset = 0;
 				var speed = 400;
@@ -322,7 +466,7 @@
 				});
 				return false;
 			}
-			
+
 			$(function() {
 			  $('a[href*=#]:not([href=#])').click(function() {
 			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -337,8 +481,29 @@
 			    }
 			  });
 			});
-			
+
+			// sequential images animation
+			$(document).ready(function() {
+				$("img#after").on('mouseover', function(){
+					$('img#middle').animate({opacity: 1}, 500, function(){
+						$('img#middle2').animate({opacity: 1}, 1000, function(){
+							$('img#after').animate({opacity: 1}, 500);
+						});
+					});
+				});
+
+				$('img#after').on('mouseout', function(){
+					$('img#after').animate({opacity: 0}, 500, function(){
+						$('img#middle2').animate({opacity: 0}, 1000, function(){
+							$('img#middle').animate({opacity: 0}, 500);
+						});
+					});
+				});
+
+			});
+
 			function moveBackground(element){
+
 				// open it
 				if($(element).css('background-position-y') == '-100px'){
 					$(element).animate({backgroundPositionY: $(element).height()*(-.6)}, 400, function(){
@@ -356,54 +521,54 @@
 					});
 				}
 			}
-			
-			$(document).ready(function(){
-				$(document).scroll(function(){
-					var scroll = $(window).scrollTop();
-					
-					$('#sideNav a').each(function(){
-						var destination = '#menu' + ($(this).parent().index()+1);
-	
-						if (scroll >= $(destination).position().top){
-							$('#sideNav a').removeClass('current');
-							$(this).addClass('current');
-						}
-					})
-				});
-				
-				// assign keys 1-6 to the menu
-				$(document).keydown(function(e) {
-				    switch(e.which) {
-				        case 49: // 1
-				        	scrollToElement('#menu1');
-				        break;
-				
-				        case 50: // 2
-				        	scrollToElement('#menu2');
-				        break;
-				
-				        case 51: // 3
-				        	scrollToElement('#menu3');
-				        break;
-				
-				        case 52: // 4
-				        	scrollToElement('#menu4');
-				        break;
-				        
-				        case 53: // 5
-				        	scrollToElement('#menu5');
-				        break;
-				        
-				        case 54: // 6
-				        	scrollToElement('#menu6');
-				        break;
-				
-				        default: return; // exit this handler for other keys
-				    }
-				    e.preventDefault(); // prevent the default action (scroll / move caret)
-				});
+
+			$(document).scroll(function(){
+				var scroll = $(window).scrollTop();
+
+				$('#sideNav a').each(function(){
+					var destination = '#menu' + ($(this).parent().index()+1);
+
+					if (scroll >= $(destination).position().top){
+						$('#sideNav a').removeClass('current');
+						$(this).addClass('current');
+
+/* 						$('.title').css({opacity: .2}); */
+/* 						$(destination + '.title').animate({opacity: .9}, 1000); */
+					}
+				})
 			});
-			
+
+			// assign keys 1-6 to the menu
+			$(document).keydown(function(e) {
+			    switch(e.which) {
+			        case 49: // 1
+			        	scrollToElement('#menu1');
+			        break;
+
+			        case 50: // 2
+			        	scrollToElement('#menu2');
+			        break;
+
+			        case 51: // 3
+			        	scrollToElement('#menu3');
+			        break;
+
+			        case 52: // 4
+			        	scrollToElement('#menu4');
+			        break;
+
+			        case 53: // 5
+			        	scrollToElement('#menu5');
+			        break;
+
+			        case 54: // 6
+			        	scrollToElement('#menu6');
+			        break;
+
+			        default: return; // exit this handler for other keys
+			    }
+			    e.preventDefault(); // prevent the default action (scroll / move caret)
+			});
         </script>
     </body>
 </html>
