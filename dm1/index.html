@@ -106,17 +106,19 @@
 	        	background-image: url('../img/grass.jpg');
         	}
 
+        		#menu1 span.whiteLine{
+	        		width: 222px;
+        		}
+
         	#menu2{
-	        	background-image: url('../img/tweed.png');
+	        	background-image: url('../img/tablaeu_blur.jpg');
 	        	position: relative;
-	        	background-repeat: repeat;
-	        	background-size: auto;
         	}
 
         		#menu2 img{
 	        		height: 400px;
 	        		box-shadow: 0 0 80px rgba(0,0,0,.5);
-	        		top: 200px;
+	        		top: 10%;
         		}
 
         		#menu2 img.first{
@@ -137,7 +139,7 @@
 
         		#menu2 img.second{
 	        		position: absolute;
-	        		left: 950px;
+	        		left: 930px;
         		}
 
         		#menu2 img:nth-child(4){
@@ -156,18 +158,24 @@
         		}
 
         	#menu3{
-				background-color: #222;
-	        	background-image: url('../img/Veg-Head.jpg');
-	        	background-size: contain;
-	        	background-position: 50% 50%;
-	        	background-repeat: no-repeat;
+	        	background-image: url('../img/Veg-Head_blur.jpg');
+	        	position: relative;
         	}
+
+        		#menu3 span.whiteLine{
+	        		width: 130px;
+        		}
+
+        		#menu3 div.title{
+	        		position: absolute;
+	        		bottom: 20px;
+	        		right: 20px;
+	        		text-shadow: 2px 2px rgba(0,0,0,.9);
+        		}
 
         	#menu4{
         		background-color: #000;
-	        	background-image: url('../img/tweed.png');
-	        	background-repeat: repeat;
-	        	background-size: auto;
+	        	background-image: url('../img/sequential_image_blur.jpg');
 	        	position: relative;
         	}
 
@@ -176,13 +184,14 @@
 	        		width: 80%;
 	        		max-width: 760px;
 	        		left: 140px;
-					bottom: 20%;
+					bottom: 23%;
 	        		opacity: 0;
 	        		transition: bottom .5s ease;
         		}
 
-        		#menu4 #before{
+        		#menu4 img#before{
 	        		box-shadow: 0 0  80px rgba(0,0,0,.5);
+	        		opacity: 1;
         		}
 
         		#menu4 span.whiteLine{
@@ -191,10 +200,7 @@
 
         		#menu4 div.title{
         			text-align: left;
-        		}
-
-        		img#before{
-	        		opacity: 1;
+					text-shadow: 2px 2px rgba(0,0,0,.2);
         		}
 
         	#menu5{
@@ -208,13 +214,23 @@
 	        	background-image: url('../img/lake2.jpg');
         	}
 
+        		#menu6 span.whiteLine{
+	        		width: 198px;
+        		}
+
+        		#menu6 div.title *:hover{
+	        		-webkit-filter: blur(10px);
+	        		transition: -webkit-filter .2s linear;
+	        		cursor: crosshair;
+        		}
+
         	div.essay{
 	        	position: absolute;
 	        	left: 0;
 	        	box-sizing: border-box;
 	        	margin: 20%;
 	        	height: 40%;
-	        	width: 60%;
+	        	width: 80%;
 	        	overflow-x: auto;
 	        	visibility: hidden;
 	        	display: inline-block;
@@ -245,9 +261,14 @@
 				vertical-align: bottom;
 				display: table-cell;
 				color: white;
+				z-index: 20;
 /* 				opacity: .8; */
 				font-family: "proxima-nova-alt";
         	}
+
+        		div.title *{
+	        		transition: -webkit-filter .2s linear;
+        		}
 
         		.title h1 {
 					text-transform: uppercase;
@@ -293,14 +314,15 @@
 				font-size: 75px;
 				color: white;
 				position: absolute;
-				left: 700px;
+				left: 920px;
 				top: 10px;
 			}
 
 				#hover img{
 					position: absolute;
-					top: 50px;
-					left: 120px;
+					top: 80px;
+					transform: rotate(60deg);
+					left: -20px;
 					opacity: 1;
 					height: 100px;
 					box-shadow: none;
@@ -335,6 +357,21 @@
 					width: 73px;
 					transition: all .5s ease;
 				}
+			}
+
+			@media screen and (max-width: 579px){
+				#menu3 span.whiteLine{
+					width: 42px;
+					transition: all .5s ease;
+				}
+			}
+
+			@media screen and (max-width: 719px){
+				#menu6 span.whiteLine{
+					width: 87px;
+					transition: all .5s ease;
+				}
+			}
         </style>
 
         <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
@@ -361,7 +398,7 @@
 	        <div class="title">
 		        <h1>Alex Goodwin</h1>
 		        <span class="whiteLine"></span>
-		        <h2>Design & Development</h2>
+		        <h2>DM1 Portfolio</h2>
 		        <span class="whiteLine"></span>
 	        </div>
 		</section> <!-- /#background -->
@@ -383,11 +420,13 @@
 		</section> <!-- /#background -->
 
 		<section class="grid-parent grid-100 background" id="menu3">
+			<img src="../img/Veg-Head.jpg" style="max-height: 100%; position: absolute; max-width: 100%;">
+
 	        <div class="title" style="text-align: right;">
 		        <h1>Veg Head</h1>
-		        <span class="whiteLine" style="width: 130px;"></span>
+		        <span class="whiteLine"></span>
 		        <h2>Photoshop</h2>
-		        <span class="whiteLine" style="width: 130px;"></span>
+		        <span class="whiteLine"></span>
 	        </div>
 		</section> <!-- /#background -->
 
@@ -435,7 +474,7 @@
 	        <div class="title">
 		        <h1>Stop Motion</h1>
 		        <span class="whiteLine"></span>
-		        <h2>Design & Development</h2>
+		        <h2>In Progress</h2>
 		        <span class="whiteLine"></span>
 	        </div>
 		</section> <!-- /#background -->
@@ -484,7 +523,9 @@
 
 			// sequential images animation
 			$(document).ready(function() {
-				$("img#after").on('mouseover', function(){
+				sideNav();
+
+				$("img#after").on('mouseenter', function(){
 					$('img#middle').animate({opacity: 1}, 500, function(){
 						$('img#middle2').animate({opacity: 1}, 1000, function(){
 							$('img#after').animate({opacity: 1}, 500);
@@ -492,7 +533,7 @@
 					});
 				});
 
-				$('img#after').on('mouseout', function(){
+				$('img#after').on('mouseleave', function(){
 					$('img#after').animate({opacity: 0}, 500, function(){
 						$('img#middle2').animate({opacity: 0}, 1000, function(){
 							$('img#middle').animate({opacity: 0}, 500);
@@ -522,7 +563,7 @@
 				}
 			}
 
-			$(document).scroll(function(){
+			function sideNav(){
 				var scroll = $(window).scrollTop();
 
 				$('#sideNav a').each(function(){
@@ -536,6 +577,10 @@
 /* 						$(destination + '.title').animate({opacity: .9}, 1000); */
 					}
 				})
+			}
+
+			$(document).scroll(function(){
+				sideNav();
 			});
 
 			// assign keys 1-6 to the menu
