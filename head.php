@@ -13,16 +13,21 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/newstyle.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    
+
+    <? if(basename($_SERVER["SCRIPT_FILENAME"]) == 'mockfolio.php'){
+	    echo "<link rel='stylesheet' href='css/mockfolio.css'>";
+    }
+    ?>
+
     <!-- Adobe Typekit -->
     <script type="text/javascript" src="http://use.typekit.net/ote6eux.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	
+
 	<!-- Google Fonts -->
 <!-- 	<link href='http://fonts.googleapis.com/css?family=Raleway:100,800,900,400,200' rel='stylesheet' type='text/css'> -->
-	
+
 	<!-- font awesome -->
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
